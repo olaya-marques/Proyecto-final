@@ -15,6 +15,7 @@ def load_data():
     """
     return pd.read_csv("../Data/Usuario.csv",index_col=0)
 
+
 def user_input_features(data):
     """
     Guarda la información introducida por el usuario para predecir la variable "Attrition"
@@ -25,8 +26,16 @@ def user_input_features(data):
     """
     return pd.DataFrame(data, index=[0])
 
+
 #limpieza de datos de usuario
 def transformacion(data):
+     """
+    Transforma los datos introducidos por el usuario para que el modelo lo entienda (misma estructura y forma)
+    Args: 
+        Datos del usuario
+    Returns:
+        Los datos transformados y traducidos introducidos por el usuario
+    """
     for key,value in data.items():
         if key == "OverTime" and value =="Yes":
             data["OverTime"] = 1

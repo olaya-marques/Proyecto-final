@@ -44,7 +44,6 @@ with col4:
 WorkLifeBalance = int(st.slider("Work-Life Balance", 2, 4, 1))
 
 
-
 #Datos trabajo/administración
 st.subheader("Job/Administration Data 💼")
 Department = st.selectbox(label="Department", options=("Sales", "Research & Development", "Human Resources"))
@@ -64,7 +63,6 @@ with col9:
     YearsAtCompany = int(st.number_input("Years at company",0,40))
 
 
-
 #Datos trabajo
 st.subheader("Work Data 💰")
 col10, col11 = st.beta_columns(2)
@@ -80,12 +78,12 @@ with col13:
     PercentSalaryHike = int(st.number_input("Percent salary hike",0,40))
 
 
-
 #Datos satisfación
 st.subheader("Satisfaction Data 🤩")
 JobSatisfaction = int(st.slider("Job Satisfaction", 2, 4, 1))
 EnviromentSatisfaction = int(st.slider("Environment Satisfaction", 2, 4, 1))
 RelationshipSatisfaction = int(st.slider("Relationship Satisfaction", 2, 4, 1))
+
 
 #Confirmar los datos del usuario
 data = { "Age": Age,
@@ -108,10 +106,12 @@ data = { "Age": Age,
     "YearsInCurrentRole": YearsInCurrentRole
     }
 
+
 #Botón de predicción
 if st.button("Predict 🔮"):
     pred = model (data)
     st.write(pred) 
+
 
 #Cierre
 image = Image.open("./Imagenes/Cierre.png")
