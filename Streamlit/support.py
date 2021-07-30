@@ -58,13 +58,14 @@ def transformacion(data):
     return data
 
 
+#Creación del modelo
 def model(data):
     """
     Función que carga el modelo predictivo para predicir la variable Attrition
     Args: 
-        data: datos introducidos por el usuario
+        Datos introducidos por el usuario
     Returns:
-        pred: Attrition
+        Attrition (predicción y probabilidad)
     """
     
     #cargamos los datos del dataset original, para ello empleamos la función load_data(), definida anteriormente
