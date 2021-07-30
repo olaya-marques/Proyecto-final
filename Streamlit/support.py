@@ -29,7 +29,7 @@ def user_input_features(data):
 
 #limpieza de datos de usuario
 def transformacion(data):
-     """
+    """
     Transforma los datos introducidos por el usuario para que el modelo lo entienda (misma estructura y forma)
     Args: 
         Datos del usuario
